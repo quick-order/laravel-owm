@@ -10,10 +10,14 @@ class WeatherServiceProvider extends ServiceProvider {
 
         $this->publishes(
             [
-                __DIR__ . '/../config/weather.php' => config('weather.php')
+                __DIR__ . '/../config/weather.php' => config_path('weather.php')
             ],
             'weather-config'
         );
+
+        if (config('weather.default_routes')) {
+            $this->loadRoutesFrom(__DIR__ . '/../routes/routes.php');
+        }
     }
 
     public function register() {
