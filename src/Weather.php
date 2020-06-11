@@ -8,18 +8,21 @@ use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 
 class Weather {
 
-    public static $owm;
+    protected static $owm;
 
     public function __construct() {
-        self::$owm = new OpenWeatherMap(
-            config('weather.API_KEY'),
+        self::$owm = self::getOwm();
+    }
+
+    private static function getOwm() {
+        return self::$owm ? self::$owm : new OpenWeatherMap(
+            config('weather.api_key'),
             GuzzleAdapter::createWithConfig([]),
             new RequestFactory()
         );
     }
 
     public static function getWeather($query, $units = 'imperial', $lang = 'en', $appid = '') {
-        return self::$owm->getWeather($query, $units, $lang, $appid);
+        return self::getOwm()->getWeather($query, $units, $lang, $appid);
     }
-
 }
