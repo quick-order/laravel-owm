@@ -17,7 +17,11 @@ php artisan vendor:publish --provider="QuickOrder\Weather\WeatherServiceProvider
 use \QuickOrder\Weather\Weather;
 
 $weather = Weather::getWeather(
-    'zip:5000,DK'
+    'Odense'
+);
+
+$weatherForecast = Weather::getWeatherForecast(
+    'Odense'
 );
 
 ```
