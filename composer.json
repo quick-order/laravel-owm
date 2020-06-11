@@ -7,11 +7,13 @@
         }
     ],
     "require": {
-        "laravel/laravel": "~7",
         "cmfcmf/openweathermap-php-api": "~3.2.1",
         "guzzle/http": "~3",
         "http-interop/http-factory-guzzle": "^1.0",
         "php-http/guzzle6-adapter": "^2.0 || ^1.0"
+    },
+    "require-dev": {
+        "laravel/laravel": "~7"
     },
     "autoload": {
         "psr-4": {
