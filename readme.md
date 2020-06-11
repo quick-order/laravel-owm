@@ -16,6 +16,11 @@ Add github repository and package name to composer.json
 }
 ```
 
+And now lets install the package
+```bash
+composer install
+```
+
 You can publish the config file with:
 ```bash
 php artisan vendor:publish --provider="QuickOrder\Weather\WeatherServiceProvider"
