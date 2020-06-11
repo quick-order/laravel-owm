@@ -14,10 +14,6 @@ class WeatherServiceProvider extends ServiceProvider {
             ],
             'weather-config'
         );
-
-        if (config('weather.default_routes')) {
-            $this->loadRoutesFrom(__DIR__ . '/../routes/routes.php');
-        }
     }
 
     public function register() {
