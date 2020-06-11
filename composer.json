@@ -1,0 +1,24 @@
+{
+    "name": "aat2703/laravel-weather",
+    "authors": [
+        {
+            "name": "Andreas Aagaard",
+            "email": "at@quickorder.dk"
+        }
+    ],
+    "require": {
+        "laravel/laravel": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "aat2703\\Weather\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "aat2703\\Weather\\WeatherServiceProvider"
+            ]
+        }
+    }
+}
