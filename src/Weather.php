@@ -4,7 +4,7 @@ namespace aat2703\Weather;
 
 class Weather {
 
-    public function getWeather() {
+    public static function getWeather() {
         return 1337;
     }
 
