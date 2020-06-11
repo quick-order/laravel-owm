@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "aat2703\\Weather\\": "src/"
+            "QuickOrder\\Weather\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "aat2703\\Weather\\WeatherServiceProvider"
+                "QuickOrder\\Weather\\WeatherServiceProvider"
             ]
         }
     }

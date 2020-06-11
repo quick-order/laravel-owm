@@ -1,6 +1,6 @@
 <?php
 
-namespace aat2703\Weather;
+namespace QuickOrder\Weather;
 
 use Cmfcmf\OpenWeatherMap;
 use Http\Factory\Guzzle\RequestFactory;

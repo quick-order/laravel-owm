@@ -1,6 +1,6 @@
 <?php
 
-namespace aat2703\Weather\Facades;
+namespace QuickOrder\Weather\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
