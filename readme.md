@@ -10,3 +10,14 @@ You can publish the config file with:
 ```bash
 php artisan vendor:publish --provider="QuickOrder\Weather\WeatherServiceProvider"
 ```
+
+## Usage
+
+```php
+use \QuickOrder\Weather\Weather;
+
+$weather = Weather::getWeather(
+    'zip:5000,DK'
+);
+
+```
