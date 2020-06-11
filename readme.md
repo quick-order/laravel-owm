@@ -1,9 +1,19 @@
 ## Installation
 
-You can install the package via composer:
 
-```bash
-composer require quick-order/laravel-owm
+Add github repository and package name to composer.json
+```json
+{
+    "require": {
+         "quick-order/laravel-owm": "0.*"
+     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/quick-order/laravel-owm"
+        }
+    ]
+}
 ```
 
 You can publish the config file with:
