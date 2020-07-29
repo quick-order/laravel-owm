@@ -10,7 +10,8 @@
         "cmfcmf/openweathermap-php-api": "~3.2.1",
         "guzzle/http": "~3",
         "http-interop/http-factory-guzzle": "^1.0",
-        "php-http/guzzle6-adapter": "^2.0 || ^1.0"
+        "php-http/guzzle6-adapter": "^2.0 || ^1.0",
+        "illuminate/support": "^6|^7"
     },
     "require-dev": {
         "laravel/laravel": "~7"
