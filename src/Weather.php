@@ -5,8 +5,9 @@ namespace QuickOrder\Weather;
 use Cmfcmf\OpenWeatherMap;
 use Http\Factory\Guzzle\RequestFactory;
 use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
+use \QuickOrder\Weather\Contracts\Weather as WeatherContract;
 
-class Weather {
+class Weather implements WeatherContract {
 
     /**
      * @var OpenWeatherMap|mixed
