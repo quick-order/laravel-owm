@@ -15,21 +15,20 @@ class Weather implements WeatherContract {
 
     protected static $owm;
 
-    public function __construct() {
-        self::$owm = self::getOwm();
-    }
-
     /**
      * @return OpenWeatherMap|mixed
      */
 
-    private static function getOwm() {
-        return self::$owm ? self::$owm : new OpenWeatherMap(
-            config('weather.api_key'),
-            GuzzleAdapter::createWithConfig([]),
-            new RequestFactory()
-        );
-    }
+	private static function getOwm() {
+		if (is_null(self::$owm)) {
+			self::$owm = new OpenWeatherMap(
+				config('weather.api_key'),
+				GuzzleAdapter::createWithConfig([]),
+				new RequestFactory()
+			);
+		}
+		return self::$owm;
+	}
 
     /**
      * @param $query
