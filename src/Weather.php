@@ -3,8 +3,8 @@
 namespace QuickOrder\Weather;
 
 use Cmfcmf\OpenWeatherMap;
+use GuzzleHttp\Client;
 use Http\Factory\Guzzle\RequestFactory;
-use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 use \QuickOrder\Weather\Contracts\Weather as WeatherContract;
 
 class Weather implements WeatherContract {
@@ -23,7 +23,7 @@ class Weather implements WeatherContract {
 		if (is_null(self::$owm)) {
 			self::$owm = new OpenWeatherMap(
 				config('weather.api_key'),
-				GuzzleAdapter::createWithConfig([]),
+				new Client(),
 				new RequestFactory()
 			);
 		}

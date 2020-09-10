@@ -8,13 +8,11 @@
     ],
     "require": {
         "cmfcmf/openweathermap-php-api": "~3.2.1",
-        "guzzle/http": "~3",
-        "http-interop/http-factory-guzzle": "^1.0",
-        "php-http/guzzle6-adapter": "^2.0 || ^1.0",
-        "illuminate/support": "^6|^7"
+        "guzzlehttp/guzzle": "^7.0.1",
+        "http-interop/http-factory-guzzle": "^1.0"
     },
     "require-dev": {
-        "laravel/laravel": "~7"
+        "laravel/laravel": "^8.0"
     },
     "autoload": {
         "psr-4": {
